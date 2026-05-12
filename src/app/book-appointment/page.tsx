@@ -67,9 +67,17 @@ export default function BookAppointmentPage() {
 
             <div className="mt-10 rounded-2xl bg-white p-6 shadow-sm">
               <h3 className="font-semibold text-zinc-900">Clinic Hours</h3>
-              <p className="mt-2 text-sm text-zinc-600">
-                {siteConfig.timings}
-              </p>
+              <div className="mt-2 space-y-2">
+                <p className="text-sm text-zinc-600">
+                  <span className="font-medium">OPD:</span> {siteConfig.timings.opd}
+                </p>
+                <p className="text-sm text-zinc-600">
+                  <span className="font-medium">Diagnostic:</span> {siteConfig.timings.diagnostic}
+                </p>
+                <p className="text-sm text-zinc-600">
+                  <span className="font-medium">Sunday:</span> {siteConfig.timings.sunday}
+                </p>
+              </div>
               <h3 className="mt-6 font-semibold text-zinc-900">Call Us</h3>
               <a
                 href={`tel:${siteConfig.phone}`}
